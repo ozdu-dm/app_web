@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Añadir Usuario{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <h2>Añadir Nuevo Usuario</h2>
+        <form action="/addmail" method="POST">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+            
+            <label>Correo Electrónico:</label>
+            <input type="email" name="email" required>
+            
+            <button type="submit">Guardar Usuario</button>
+        </form>
+
+        {% if exito %}
+            <div class="alert success">{{ exito }}</div>
+        {% endif %}
+        
+        {% if error %}
+            <div class="alert error">{{ error }}</div>
+        {% endif %}
+
+        <hr>
+        <p>¿Quieres buscar? <a href="/getmail" class="btn-link">Ir a Buscar Mail (GetMail)</a></p>
+    </div>
+{% endblock %}
