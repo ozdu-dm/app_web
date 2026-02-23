@@ -5,7 +5,7 @@ config = {
     'host': 'localhost',
     'user': 'root',
     'password': '',
-    'database': 'nom_mail' # Asegúrate de que coincida con tu phpMyAdmin
+    'database': 'nom_mail' 
 }
 
 def conectar():
